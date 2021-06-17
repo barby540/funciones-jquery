@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JQuery::</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                console.log("Estoy en JQuery desde Button");
+                alert("Estoy en JQuery desde Button");
+            })
+            $('input.input2').click(function() {
+                console.log("Estoy en JQuery desde Input.clase");
+                alert("Estoy en JQuery desde Input.clase");
+            });
+
+            $('#input3').click(function() {
+                console.log("Estoy en JQuery desde Inpuit por el id");
+                alert("Estoy en JQuery desde Inpuit por el id");
+                $('#parrafo').text("");
+            });
+
+            var indice = 0;
+
+            $('#input4').click(function() {
+                console.log($('#parrafo').text());
+                $('#parrafo').text("Esto es texto modificado");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1> my jquery basic assignment </h1>
+        <p id="parrafo1">clik en el botón para llamar al evento click</p>
+        <button id="boton1">htp/local/jauqer basic</button>
+        <input type="search">
+        <div>
+            <h2> Addclass </h2>
+            <input type="button" value="addclass" class="input2">
+            <p> click the button to add class 'red' to this paragraph </p>
+            <H2>Slidetoggle </H2>
+            <input type="button" value="slidetoggle" id="input3">
+            <p>clicl the button to slidetoggle a hidden image </p>
+            <H2>Append </H2>
+            <input type="button" value="append" id="input4">
+            <p id="parrafo" class="input2">click the button to append a nwe paragraph</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
